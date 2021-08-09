@@ -6,17 +6,17 @@ def size_predict(model, df):
     # Convert numerical prediction to categorical
     if prediction >= 6.50:
         pred = "XXXL"
-    elif prediction >= 5.50:
+    elif prediction >= 6.00:
         pred = "XXL"
-    elif prediction >= 4.50:
+    elif prediction >= 5.30:
         pred = "XL"
-    elif prediction >= 3.50:
+    elif prediction >= 4.10:
         pred = "L"
-    elif prediction >= 2.50:
+    elif prediction >= 3.40:
         pred = "M"
-    elif prediction >= 1.8:
+    elif prediction >= 2.70:
         pred = "S"
-    elif prediction >= 1.20:
+    elif prediction >= 2.00:
         pred = "XS"
     else:
         pred = "XXS"

@@ -22,8 +22,8 @@ def home():
         weight = flask.request.form['weight']
         age = flask.request.form['age']
 
-        bmi = weight / (height**2) * 10000
-        input_variables = pd.DataFrame([[bmi, age]], columns=['bmi', 'weight'], dtype=float)
+        bmi = float(weight) / (float(height)**2) * 10000
+        input_variables = pd.DataFrame([[age, bmi]], columns=['age', 'bmi'], dtype=float)
 
         pred = size_predict(model, input_variables)
 
@@ -36,4 +36,5 @@ def home():
                                 )
 
 if __name__ == '__main__':
+    app.debug = True
     app.run()

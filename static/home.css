@@ -1,10 +1,70 @@
+body {
+    background: black url(asset/home_background.jpg) no-repeat top;
+    background-size: 100%;
+  }
+
+  .btn-outline {
+    border-radius: 10px;
+    background-color: transparent;
+    border-color:rgb(217, 237, 255);
+    color: rgb(217, 237, 255);
+    font-family:"monospace";
+    font-size: 15px;
+    padding: 10px;
+    transition: all .5s;;
+}
+
 form {
+    color: rgb(217, 237, 255);
+    font-family:fantasy;
     margin: auto;
-    width: 35%;
+    width: 50%;
+}
+
+.form-control {
+    display: block;
+    width: 30%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+
+fieldset{
+    border: 1px solid rgb(217, 237, 255);
+    border-radius: 10px;
+}
+
+h2{
+    color: rgb(217, 237, 255);
+    font-family:fantasy;
+}
+
+h3{
+    color: rgb(217, 237, 255);
+    font-family:fantasy;
+}
+
+.btn-outline:hover {
+    background-color: rgb(217, 237, 255);
+    border-color: rgb(0, 0, 0);
+    color:rgb(0, 0, 0);
 }
 
 .result {
     margin: auto;
+    border-radius: 10px;
     width: 35%;
-    border: 1px solid #ccc;
+    border: 1px solid rgb(217, 237, 255);
+    color: rgb(217, 237, 255);
+    font-family:fantasy;
 }
