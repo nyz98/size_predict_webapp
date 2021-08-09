@@ -7,6 +7,7 @@ import xgboost
 # Use pickle to load in the pre-trained model.
 with open(f'model/size_predictor.pkl', 'rb') as f:
     model = pickle.load(f)
+print(model)
 
 app = Flask(__name__, template_folder='templates')
 
