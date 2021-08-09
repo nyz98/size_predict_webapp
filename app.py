@@ -1,4 +1,3 @@
-from setup.core import size_predict
 from flask import Flask, render_template
 import flask
 import pickle
@@ -25,7 +24,25 @@ def home():
 
         input_variables = pd.DataFrame([[weight, age, height]], columns=['weight', 'age', 'height'], dtype=float)
 
-        pred = size_predict(model, input_variables)
+        prediction = model.predict(input_variables)[0]
+
+        # Convert numerical prediction to categorical
+        if prediction >= 6.50:
+            pred = "XXXL"
+        elif prediction >= 6.00:
+            pred = "XXL"
+        elif prediction >= 5.30:
+            pred = "XL"
+        elif prediction >= 4.10:
+            pred = "L"
+        elif prediction >= 3.40:
+            pred = "M"
+        elif prediction >= 2.70:
+            pred = "S"
+        elif prediction >= 2.00:
+            pred = "XS"
+        else:
+            pred = "XXS"
 
         return render_template('home.html',
                                 original_input=
